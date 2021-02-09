@@ -34,45 +34,49 @@ html(lang="es")
 
         section.cards.container 
             .card 
-                img(src="img/card1.jpg", alt="Clases en Linea")
-                h4 Put something here 
+                .card-img    
+                    img(src="img/card1.jpg", alt="Clases en Linea")
+                    h4 Put something here 
                 h5 Maybe here as well i think
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab voluptatum illum voluptas odio facilis nisi perferendis?
             .card 
-                img(src="img/card2.jpg", alt="Clases en Linea")
-                h4 Put something here 
+                .card-img    
+                    img(src="img/card2.jpg", alt="Clases en Linea")
+                    h4 Put something here 
                 h5 Maybe here as well i think
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab voluptatum illum voluptas odio facilis nisi perferendis?
-            .card 
-                img(src="img/card3.jpg", alt="Clases en Linea")
-                h4 Put something here 
+            .card
+                .card-img 
+                    img(src="img/card3.jpg", alt="Clases en Linea")
+                    h4 Put something here 
                 h5 Maybe here as well i think
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab voluptatum illum voluptas odio facilis nisi perferendis?
 
         section.about
-            .colors
-                h4 Interesting stuff
-                .colors-one
-                    .color
-                        img(src="img/pic04.jpg", alt="color")
-                    .color
-                        img(src="img/pic05.jpg", alt="color")
-                .colors-two    
-                    .color
-                        img(src="img/pic06.jpg", alt="color")    
-                    .color
-                        img(src="img/pic07.jpg", alt="color")
-                    
-                button(name="more").btn.btn-more 
-                   <i class="fas fa-file-alt"></i> More
+            .about-container    
+                .colors
+                    h4 Interesting stuff
+                    .colors-one
+                        .color
+                            img(src="img/pic04.jpg", alt="color")
+                        .color
+                            img(src="img/pic05.jpg", alt="color")
+                    .colors-two    
+                        .color
+                            img(src="img/pic06.jpg", alt="color")    
+                        .color
+                            img(src="img/pic07.jpg", alt="color")
+                        
+                    button(name="more").btn.btn-more 
+                        <i class="fas fa-file-alt"></i> More
 
-            .about-text 
-                h2 So what's this all about?
-                p Lorem ipsum es simplemente el tecto de relleno de las imprentas y archivos de texto. Lorem ipsum ha sido el texto de relleno estandar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galeria de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No solo sobrevivió 500años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creacion de las hojas "Lestraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-                br
-                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae magnam doloremque delectus architecto voluptate voluptatum aliquid quia nostrum. Similique tenetur necessitatibus earum accusamus ipsa.
+                .about-text 
+                    h2 So what's this all about?
+                    p Lorem ipsum es simplemente el tecto de relleno de las imprentas y archivos de texto. Lorem ipsum ha sido el texto de relleno estandar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galeria de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No solo sobrevivió 500años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creacion de las hojas "Lestraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+                    br
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae magnam doloremque delectus architecto voluptate voluptatum aliquid quia nostrum. Similique tenetur necessitatibus earum accusamus ipsa.
 
-                button(name="continue").btn.btn-about <i class="fas fa-arrow-circle-right"></i> Continue Reading
+                    button(name="continue").btn.btn-about <i class="fas fa-arrow-circle-right"></i> Continue Reading
                        
         footer#footer 
             .footer-container.container
@@ -100,11 +104,11 @@ html(lang="es")
                 .text-footer
                     h5 Contact Us 
                     ul.list-social  
-                        li.social :<i class="fab fa-twitter-square"></i>
-                        li.social :<i class="fab fa-facebook-square"></i>
-                        li.social :<i class="fab fa-instagram-square"></i>
-                        li.social :<i class="fab fa-dribbble-square"></i>
-                        li.social :<i class="fab fa-pinterest-square"></i>
+                        li.social: a(href="#") <i class="fab fa-twitter-square"></i>
+                        li.social: a(href="#") <i class="fab fa-facebook-square"></i>
+                        li.social: a(href="#") <i class="fab fa-instagram-square"></i>
+                        li.social: a(href="#") <i class="fab fa-dribbble-square"></i>
+                        li.social: a(href="#") <i class="fab fa-pinterest-square"></i>
 
                     p 1234 Fictional Road 
                     p Nashville, TN 00000
