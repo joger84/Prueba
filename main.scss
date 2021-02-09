@@ -1,3 +1,5 @@
+$btn-color: #1591C4;
+
 *{
     padding: 0;
     margin: 0;
@@ -9,14 +11,16 @@ body{
     background-color: #ECECEC;
     font-family: 'Open Sans', sans-serif;
 }
+
   
 header{
     width: 100%;
-    height: 150px;
+    height: 100px;
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 
     .logo{
         font-family: 'Oleo Script', cursive;
@@ -24,13 +28,13 @@ header{
         
         & h2{
             letter-spacing: 1px;
-            font-size: 50px;
+            font-size: 30px;
         }
     }
         .list-item{
             display: inline;
-            padding: 5px 10px;
-            margin: 0 5px;
+            padding: 5px 5px;
+            margin: 0 1px;
             // border: 1px black solid;
             border-radius: 5px;
 
@@ -38,11 +42,71 @@ header{
                 text-decoration: none;
                 color: #716967;
                 font-weight: 800;
-                font-size: 16px;
+                font-size: 12px;
             }
         }
-    
-    
+}
 
-    
+.main-container{
+    // border: 1px black solid;
+    max-width: 80%;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    border-radius: 5px;
+        
+        & .text-container{
+            margin: 0 30px;
+            overflow: hidden;
+            
+            h1{
+                color: #454545;
+                font-weight: 800;
+                font-size: 40px;
+                padding: 0 5px;
+                
+            }
+            p{
+                font-size: 30px;
+                color: #BAADA3;
+                font-weight: 200;
+                padding: 0 5px;
+            }
+        }
+
+        & .btn-text{
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
+            top: 40px;
+            
+            & .main-btn{
+                width: 80%;
+                margin-top: 9px;
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // border: 1px black solid;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 800;
+                color:#FFFFFF ;
+                background: $btn-color;
+            }
+
+            & .main-btn:nth-child(2){
+                background: #F2F2F2;
+                color: #5A524B;
+            }
+        }
 }
