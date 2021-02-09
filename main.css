@@ -35,7 +35,7 @@ header .list-item {
 }
 header .list-item a {
   text-decoration: none;
-  color: #716967;
+  color: #72706D;
   font-weight: 800;
   font-size: 12px;
 }
@@ -58,14 +58,14 @@ header .list-item a {
   overflow: hidden;
 }
 .main-container .text-container h1 {
-  color: #454545;
+  color: #434542;
   font-weight: 800;
   font-size: 40px;
   padding: 0 5px;
 }
 .main-container .text-container p {
   font-size: 30px;
-  color: #BAADA3;
+  color: #72706D;
   font-weight: 200;
   padding: 0 5px;
 }
@@ -96,7 +96,7 @@ header .list-item a {
 }
 .main-container .btn-text .main-btn:nth-child(2) {
   background: #F2F2F2;
-  color: #5A524B;
+  color: #434542;
 }
 
 .cards {
@@ -144,7 +144,7 @@ header .list-item a {
   line-height: 25px;
   text-align: left;
   margin: 0 10px;
-  color: #aaa4a0;
+  color: #72706D;
 }
 .cards .card:nth-child(2) {
   margin: 0 20px;
@@ -173,7 +173,7 @@ header .list-item a {
   margin-bottom: 10px;
   font-weight: 800;
   letter-spacing: -1px;
-  color: #414141;
+  color: #434542;
 }
 .about .about-container .colors .colors-one {
   width: 250px;
@@ -215,13 +215,13 @@ header .list-item a {
 }
 .about .about-container .about-text h2 {
   font-weight: 800;
-  color: #434241;
+  color: #434542;
   margin-bottom: 15px;
 }
 .about .about-container .about-text p {
   font-size: 12px;
   line-height: 25px;
-  color: #aaa4a0;
+  color: #72706D;
 }
 .about .about-container .about-text .btn-about {
   width: 200px;
@@ -236,12 +236,59 @@ header .list-item a {
 }
 
 #footer {
-  border: 1px solid black;
   width: 80%;
-  height: 100%;
-  margin: auto;
-  position: relative;
-  top: 400px;
+  margin: 4rem auto 2rem;
+}
+#footer .footer-container {
+  display: flex;
+}
+#footer .footer-container .text-footer {
+  width: 200px;
+  margin-right: 10px;
+}
+#footer .footer-container .text-footer h5 {
+  color: #434542;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+#footer .footer-container .text-footer a {
+  color: #72706D;
+  line-height: 25px;
+  font-size: 12px;
+  display: block;
+}
+#footer .footer-container .social-footer h5 {
+  color: #434542;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+#footer .footer-container .social-footer .list-social {
+  display: flex;
+}
+#footer .footer-container .social-footer .list-social .social {
+  list-style: none;
+  margin-bottom: 10px;
+}
+#footer .footer-container .social-footer .list-social .social a {
+  color: #434542;
+  font-size: 30px;
+  margin-right: 5px;
+}
+#footer .footer-container .social-footer p {
+  font-size: 12px;
+  line-height: 25px;
+  color: #72706D;
+}
+#footer .copy {
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+#footer .copy p {
+  font-size: 12px;
+  line-height: 25px;
+  color: #B8BBBC;
 }
 
 /*# sourceMappingURL=main.css.map */
