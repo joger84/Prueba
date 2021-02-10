@@ -629,8 +629,6 @@ header{
             margin: 0;
             margin-bottom: 15px;
         }
-
-        
     }
 
     .about{
@@ -640,10 +638,61 @@ header{
             }
         }
     }
+}
+
+@media (max-width: 350px){
     
+    header{
+        width: 90%;
 
+        #menuToggle{
+            display: block;
+            & input:checked ~ ul {
+                transform: translate(-50%, 0);
+            }
+        }
+    }
 
+    .main-container{
+        height: unset;
+        flex-direction: column;
+        
+        & .text-container{
+            width: max-content;
+            & p{
+                display: none;
+            }
+        }
 
+        .btn-text{
+            width: 70%;
+            .main-btn{
+                font-size: 15px;
+                padding: 15px 10px;
+            }
+        }
+    }
 
+    #footer{
+        .footer-container{
+            & .text-footer{
+                & h5{
+                    font-size: 12px;
+                }
+            }
 
+            .social-footer{
+                & h5{
+                    font-size: 12px;
+                }
+                & .list-social{
+                    flex-direction: column;
+                    & .social{
+                        margin-top: unset;
+                    }
+                }
+            }
+        }
+       
+    }
 }
