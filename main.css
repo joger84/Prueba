@@ -7,10 +7,94 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: #ECECEC;
+  background: url(/img/fondo.jpg) round;
   font-family: "Open Sans", sans-serif;
 }
 
+#menuToggle {
+  display: none;
+  /*Desactivamos el menu*/
+  position: relative;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover {
+  color: tomato;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-300%, 0);
+  /*Mueve el menu de izquierda a dechera*/
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/*Inicio del Home*/
 header {
   width: 100%;
   height: 100px;
@@ -20,12 +104,12 @@ header {
   align-items: center;
 }
 header .logo {
-  font-family: "Oleo Script", cursive;
-  color: #F2453E;
+  width: 170px;
 }
-header .logo h2 {
-  letter-spacing: 1px;
-  font-size: 30px;
+header .logo a img {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
 }
 header .list-item {
   display: inline;
@@ -38,6 +122,13 @@ header .list-item a {
   color: #72706D;
   font-weight: 800;
   font-size: 12px;
+}
+header .list-item:first-child a {
+  background-color: #434542;
+  border: 1px #434542 solid;
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 5px 5px;
 }
 
 .main-container {
@@ -54,7 +145,7 @@ header .list-item a {
   border-radius: 5px;
 }
 .main-container .text-container {
-  margin: 0 30px;
+  margin: 0 15px;
   overflow: hidden;
 }
 .main-container .text-container h1 {
@@ -70,7 +161,7 @@ header .list-item a {
   padding: 0 5px;
 }
 .main-container .btn-text {
-  width: 100%;
+  width: 50%;
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
@@ -78,10 +169,10 @@ header .list-item a {
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .main-container .btn-text .main-btn {
-  width: 80%;
+  width: 100%;
   margin-top: 9px;
   padding: 15px 20px;
   display: flex;
@@ -93,10 +184,23 @@ header .list-item a {
   font-weight: 800;
   color: #FFFFFF;
   background: #1591C4;
+  transition: all 2s;
+}
+.main-container .btn-text .main-btn i {
+  transition: 1s;
+}
+.main-container .btn-text .main-btn:hover {
+  background-color: #22c0ff;
+}
+.main-container .btn-text .main-btn:hover i {
+  transform: scale(1.5);
 }
 .main-container .btn-text .main-btn:nth-child(2) {
   background: #F2F2F2;
   color: #434542;
+}
+.main-container .btn-text .main-btn:nth-child(2):hover {
+  background-color: #bbbbbb;
 }
 
 .cards {
@@ -114,22 +218,28 @@ header .list-item a {
 }
 .cards .card .card-img {
   position: relative;
+  transition: all 2s;
 }
 .cards .card .card-img img {
   overflow: hidden;
   box-sizing: border-box;
   width: 100%;
   height: 60%;
+  transition: all 2s;
 }
 .cards .card .card-img h4 {
   font-weight: 800;
   letter-spacing: -1px;
-  text-align: left;
   margin: 0 10px;
   color: #FFFFFF;
   position: absolute;
   bottom: 10px;
   text-shadow: 1px 1px 1px #0000009f;
+  transition: all 2s;
+}
+.cards .card .card-img:hover {
+  transform: scale(0.9);
+  cursor: pointer;
 }
 .cards .card h5 {
   font-weight: 800;
@@ -196,6 +306,12 @@ header .list-item a {
   height: 100%;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 2s;
+}
+.about .about-container .colors .color img:hover {
+  filter: grayscale(80%);
+  transform: scale(3);
+  cursor: pointer;
 }
 .about .about-container .colors .btn-more {
   width: 90px;
@@ -207,11 +323,21 @@ header .list-item a {
   background: #1591C4;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
+  transition: all 2s;
 }
 .about .about-container .colors .btn-more i {
   font-weight: 100;
   font-size: 15px;
   margin-right: 5px;
+  transition: all 1s;
+}
+.about .about-container .colors .btn-more:hover {
+  background-color: #22c0ff;
+}
+.about .about-container .colors .btn-more:hover i {
+  transform: rotateY(180deg) scale(1.1);
+  transform-style: preserve-3d;
 }
 .about .about-container .about-text h2 {
   font-weight: 800;
@@ -233,6 +359,17 @@ header .list-item a {
   background: #1591C4;
   border: none;
   border-radius: 3px;
+  transition: all 2s;
+  cursor: pointer;
+}
+.about .about-container .about-text .btn-about i {
+  transition: all 1s;
+}
+.about .about-container .about-text .btn-about:hover {
+  background-color: #22c0ff;
+}
+.about .about-container .about-text .btn-about:hover i {
+  transform: rotate(270deg) scale(1.1);
 }
 
 #footer {
@@ -276,6 +413,12 @@ header .list-item a {
   font-size: 30px;
   margin-right: 5px;
 }
+#footer .footer-container .social-footer .list-social .social a i:hover {
+  background: rgba(0, 0, 0, 0);
+  color: #1591C4;
+  box-shadow: inset 0 0 0 3px #1591C4;
+  border-radius: 5px;
+}
 #footer .footer-container .social-footer p {
   font-size: 12px;
   line-height: 25px;
@@ -288,7 +431,64 @@ header .list-item a {
 #footer .copy p {
   font-size: 12px;
   line-height: 25px;
-  color: #B8BBBC;
+  color: #7e8182;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+  header .list-group {
+    display: none;
+  }
+
+  .main-container .btn-text {
+    overflow: unset;
+  }
+  .main-container .btn-text .main-btn {
+    font-weight: 600;
+    font-size: unset;
+    padding: 15px 10px;
+  }
+
+  #footer .social-footer {
+    width: 35%;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+  #menuToggle input:checked ~ ul {
+    transform: translate(-40%, 0);
+  }
+}
+@media (max-width: 576px) {
+  .main-container .text-container h1 {
+    font-size: 25px;
+  }
+  .main-container .text-container p {
+    font-size: 25px;
+  }
+  .main-container .btn-text {
+    width: 70%;
+  }
+  .main-container .btn-text .main-btn {
+    font-size: 11px;
+    padding: 15px 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+  .cards .card {
+    margin-bottom: 15px;
+  }
+  .cards .card:nth-child(2) {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .about .about-container .colors {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

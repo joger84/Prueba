@@ -12,66 +12,82 @@ html(lang="es")
         link(href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet")
     body
         header.header 
-            .logo 
-                h2 my Lorem
-            nav.nav     
+            .logo
+                a(href="#") 
+                    img(src="img/logo.jpeg", alt="logo")
+            nav(role="navigation").nav 
+                #menuToggle
+                    input(type="checkbox")
+                    span 
+                    span 
+                    span
+
+                    ul#menu
+                        a(href="#"): li Home  
+                        a(href="#"): li Procesos  
+                        a(href="#"): li Jornada Mañana  
+                        a(href="#"): li Jornada Tarde 
+                        a(href="#"): li Colegio 
+
+
+
                 ul.list-group 
-                    li.list-item: a(href="#") Welcome  
-                    li.list-item: a(href="#") Dropdown 
-                    li.list-item: a(href="#") Left Sidebar 
-                    li.list-item: a(href="#") Right Sidebar
-                    li.list-item: a(href="#") No Sidebar 
+                    li.list-item: a(href="#") Home
+                    li.list-item: a(href="#") Procesos
+                    li.list-item: a(href="#") Jornada Mañana 
+                    li.list-item: a(href="#") Jornada Tarde
+                    li.list-item: a(href="#") Colegio
 
         section.main-container.container
             .text-container 
-                h1 Hi. This is Lorem.
-                p.p-container Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                h1 Robert F. Kennedy
+                p Inscripciones abiertas. No pierdas la oportunidad.
             .btn.btn-text 
-                a(href="#" name="button").btn.main-btn Ok let's go
+                a(href="#" name="button").btn.main-btn Inscribete Ya!
                     <i class="fas fa-arrow-circle-right"></i> 
-                a(href="#" name="button").btn.main-btn More info
+                a(href="#" name="button").btn.main-btn Información
                     <i class="fas fa-question-circle"></i>
 
         section.cards.container 
             .card 
                 .card-img    
                     img(src="img/card1.jpg", alt="Clases en Linea")
-                    h4 Put something here 
-                h5 Maybe here as well i think
+                    h4 Clases en Linea 
+                h5 El nuevo método de estudio
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab voluptatum illum voluptas odio facilis nisi perferendis?
             .card 
                 .card-img    
                     img(src="img/card2.jpg", alt="Clases en Linea")
-                    h4 Put something here 
-                h5 Maybe here as well i think
+                    h4 La Mejor Plataforma
+                h5 Sin perdida de conexion
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab voluptatum illum voluptas odio facilis nisi perferendis?
             .card
                 .card-img 
-                    img(src="img/card3.jpg", alt="Clases en Linea")
-                    h4 Put something here 
-                h5 Maybe here as well i think
+                    img(src="img/card3.jpg", alt="Clase Presencial")
+                    h4 Clases Presenciales 
+                h5 Con los mejores profesor
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab voluptatum illum voluptas odio facilis nisi perferendis?
 
         section.about
             .about-container    
                 .colors
-                    h4 Interesting stuff
+                    h4 Cosas de Interes
                     .colors-one
                         .color
-                            img(src="img/pic04.jpg", alt="color")
+                            img(src="img/higiene1.webp", alt="color")
                         .color
-                            img(src="img/pic05.jpg", alt="color")
+                            img(src="img/higiene2.webp", alt="color")
                     .colors-two    
                         .color
-                            img(src="img/pic06.jpg", alt="color")    
+                            img(src="img/higiene3.webp", alt="color")    
                         .color
-                            img(src="img/pic07.jpg", alt="color")
+                            img(src="img/higiene4.webp", alt="color")
                         
                     button(name="more").btn.btn-more 
                         <i class="fas fa-file-alt"></i> More
 
                 .about-text 
-                    h2 So what's this all about?
+                    h2 Entonces, ¿de qué se trata todo esto?
                     p Lorem ipsum es simplemente el tecto de relleno de las imprentas y archivos de texto. Lorem ipsum ha sido el texto de relleno estandar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galeria de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No solo sobrevivió 500años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creacion de las hojas "Lestraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
                     br
                     p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae magnam doloremque delectus architecto voluptate voluptatum aliquid quia nostrum. Similique tenetur necessitatibus earum accusamus ipsa.
